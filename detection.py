@@ -1,26 +1,33 @@
 from ultralytics import YOLO
 
-# Load YOLO model once
 model = YOLO("yolov8n.pt")
 
-def detect_objects(frame, conf_threshold=0.25):
-    """
-    Runs YOLOv8 on the input frame.
+def detect_objects(frame):
+    results = model(frame, verbose=False)[0]
+    detections = []
 
-    Args:
-        frame: np.array (BGR)
-        conf_threshold: confidence threshold
+    for box in results.boxes:
+        cls = int(box.cls[0])
+        label = model.names[cls]
+        x1, y1, x2, y2 = map(int, box.xyxy[0])
+        x_center = (x1 + x2) // 2
+        w = x2 - x1
+        h = y2 - y1
+        detections.append((label, (x_center, y1, w, h)))
 
-    Returns:
-        List of detected class names
-    """
-    results = model.predict(frame, conf=conf_threshold, verbose=False)
-    names = []
+    return detections
 
-    for r in results:
-        for box in r.boxes:
-            class_id = int(box.cls[0])
-            name = model.names[class_id]
-            names.append(name)
 
-    return names
+
+if __name__ == "__main__":
+    import cv2
+
+    cap = cv2.VideoCapture("footage/input.mp4")
+    ret, frame = cap.read()
+    cap.release()
+
+    if ret:
+        objects = detect_objects(frame)
+        print("Detected objects:", objects)
+    else:
+        print("Could not read frame.")
