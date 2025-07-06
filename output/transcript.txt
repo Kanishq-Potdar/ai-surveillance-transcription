@@ -1,18 +1,34 @@
-[00:00:00] car, car
-[00:00:01] car, car
-[00:00:02] car, car
-[00:00:03] car, car
-[00:00:04] car, car
-[00:00:05] car, car
-[00:00:06] car, motorcycle, person, car, person
-[00:00:07] car, person, motorcycle, car
-[00:00:08] car, person, motorcycle, dog
-[00:00:09] car, dog, motorcycle, person
-[00:00:10] person, car, car, person, person
-[00:00:11] car, car, person, motorcycle, horse
-[00:00:12] person, potted plant, person
-[00:00:13] person, car
-[00:00:14] person
-[00:00:15] person, person
-[00:00:16] person
-[00:00:17] person, person
+
+--- Scene changed ---
+[000.00s] A car was seen near the center. A car appeared again near the center.
+[001.00s] A car appeared again near the center. A car appeared again near the center.
+[002.00s] A car appeared again near the center. A car appeared again near the center.
+[003.00s] A car appeared again near the center. A car appeared again near the center.
+[004.00s] A car appeared again near the center. A car appeared again near the center.
+[005.00s] A car appeared again near the center. A car appeared again near the center.
+
+--- Scene changed ---
+[006.01s] A car appeared again near the right side. A motorcycle was seen near the center. A car appeared again near the center. A person was seen near the center. A person appeared again near the center.
+[007.01s] A car appeared again near the center. A person appeared again near the left side. A motorcycle appeared again near the left side. A car appeared again near the right side. A car appeared again near the right side.
+
+--- Scene changed ---
+[008.01s] A car appeared again near the center. A person appeared again near the left side. A motorcycle appeared again near the left side. A dog was seen near the right side.
+[009.01s] A car appeared again near the center. A dog appeared again near the center. A motorcycle appeared again near the left side. A person appeared again near the left side.
+
+--- Scene changed ---
+[010.01s] A car appeared again near the center. A person appeared again near the center. A car appeared again near the center. A person appeared again near the center. A person appeared again near the left side.
+
+--- Scene changed ---
+[011.01s] A car appeared again near the left side. A car appeared again near the center. A person appeared again near the center. A motorcycle appeared again near the center. A horse was seen near the center.
+
+--- Scene changed ---
+[012.01s] A person appeared again near the center. A potted plant was seen near the center. A person appeared again near the left side.
+
+--- Scene changed ---
+[013.01s] A person appeared again near the center. A car appeared again near the left side.
+
+--- Scene changed ---
+[014.01s] A person appeared again near the center.
+[015.01s] A person appeared again near the center. A person appeared again near the left side.
+[016.02s] A person appeared again near the left side.
+[017.02s] A person appeared again near the left side. A person appeared again near the left side.
