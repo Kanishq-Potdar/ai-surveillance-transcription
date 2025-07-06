@@ -54,3 +54,5 @@ output/transcript.txt# Output transcript
 ## License
 
 MIT License
+
+## Run by : streamlit run ui.py
