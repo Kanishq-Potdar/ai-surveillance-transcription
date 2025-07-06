@@ -54,3 +54,13 @@ output/transcript.txt# Output transcript
 ## License
 
 MIT License
+
+## Run in terminal by :
+If you want plain text file : ` python main.py `
+
+If you want csv file format: ` python main.py --csv `
+
+If you want to filter the object in frame :` python main.py --filter person car `    
+#(will only show when car and person appaers)
+
+for both filter and csv file format :` python main.py --video footage/input.mp4 --filter person car --csv `
