@@ -71,6 +71,19 @@ if uploaded_file is not None:
         if output_format == "Text (.txt)":
             output_path += ".txt"
             save_transcript(detections, output_path)
+            # --- Transcript Search (TXT) ---
+            st.subheader("Search Transcript")
+            search_query = st.text_input("Enter search term (TXT)")
+            transcript_lines = []
+            with open(output_path, "r", encoding="utf-8") as f:
+                transcript_lines = f.readlines()
+            if search_query:
+                results = [line for line in transcript_lines if search_query.lower() in line.lower()]
+                st.write(f"Found {len(results)} matching lines:")
+                for line in results:
+                    st.write(line)
+            else:
+                st.write("Enter a search term to filter transcript lines.")
             with open(output_path, "rb") as f:
                 st.download_button(
                     label="Download Transcript (.txt)",
@@ -79,8 +92,23 @@ if uploaded_file is not None:
                     mime="text/plain"
                 )
         else:
+            import csv
             output_path += ".csv"
             save_transcript_csv(detections, output_path)
+            # --- Transcript Search (CSV) ---
+            st.subheader("Search Transcript")
+            search_query = st.text_input("Enter search term (CSV)")
+            transcript_rows = []
+            with open(output_path, "r", encoding="utf-8") as f:
+                reader = csv.reader(f)
+                transcript_rows = list(reader)
+            if search_query:
+                results = [row for row in transcript_rows if any(search_query.lower() in str(cell).lower() for cell in row)]
+                st.write(f"Found {len(results)} matching rows:")
+                for row in results:
+                    st.write(row)
+            else:
+                st.write("Enter a search term to filter transcript rows.")
             with open(output_path, "rb") as f:
                 st.download_button(
                     label="Download Transcript (.csv)",
