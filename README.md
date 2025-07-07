@@ -1,5 +1,7 @@
 # AI Surveillance Transcription
 
+[⬇️ **Download the latest pre-release executable here**](https://github.com/Kanishq-Potdar/ai-surveillance-transcription/releases)
+
 This project analyzes surveillance footage, detects objects, and generates a human-readable transcript and CSV log of detected events using a professional Streamlit web interface.
 
 ## Features
