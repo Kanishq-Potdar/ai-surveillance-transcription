@@ -8,15 +8,15 @@
 [005.00s] A car appeared again near the center. A car appeared again near the center.
 
 --- Scene changed ---
-[006.01s] A car appeared again near the right side. A motorcycle was seen near the center. A person was seen near the center. A car appeared again near the center. A person appeared again near the center.
-[007.01s] A car appeared again near the center. A person appeared again near the left side. A motorcycle appeared again near the left side. A car appeared again near the right side.
+[006.01s] A car appeared again near the right side. A motorcycle was seen near the center. A car appeared again near the center. A person was seen near the center. A person appeared again near the center.
+[007.01s] A car appeared again near the center. A person appeared again near the left side. A motorcycle appeared again near the left side. A car appeared again near the right side. A car appeared again near the right side.
 
 --- Scene changed ---
 [008.01s] A car appeared again near the center. A person appeared again near the left side. A motorcycle appeared again near the left side. A dog was seen near the right side.
 [009.01s] A car appeared again near the center. A dog appeared again near the center. A motorcycle appeared again near the left side. A person appeared again near the left side.
 
 --- Scene changed ---
-[010.01s] A person appeared again near the center. A car appeared again near the center. A car appeared again near the center. A person appeared again near the center. A person appeared again near the left side.
+[010.01s] A car appeared again near the center. A person appeared again near the center. A car appeared again near the center. A person appeared again near the center. A person appeared again near the left side.
 
 --- Scene changed ---
 [011.01s] A car appeared again near the left side. A car appeared again near the center. A person appeared again near the center. A motorcycle appeared again near the center. A horse was seen near the center.

@@ -16,7 +16,7 @@ def save_transcript(detections, output_path):
             time_str = f"[{timestamp:06.2f}s]"
             labels = [label for label, _ in items]
 
-            # Scene change detection (if objects changed significantly)
+            # Detect scene change
             current_set = set(labels)
             scene_changed = current_set != last_objects
             last_objects = current_set
@@ -32,7 +32,6 @@ def save_transcript(detections, output_path):
                     else:
                         descriptions.append(f"A {label} was seen near the {position}.")
                         seen_objects.add(label)
-
                 description = " ".join(descriptions)
 
             if scene_changed and labels:
@@ -40,6 +39,16 @@ def save_transcript(detections, output_path):
 
             f.write(f"{time_str} {description}\n")
 
+def save_transcript_csv(detections, output_path):
+    import csv
+
+    with open(output_path, "w", newline="") as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(["Timestamp", "Object", "X_center", "Y_top", "Width", "Height"])
+
+        for timestamp, items in detections:
+            for label, (x, y, w, h) in items:
+                writer.writerow([f"{timestamp:.2f}", label, x, y, w, h])
 
 def get_position(x):
     if x < 213:
